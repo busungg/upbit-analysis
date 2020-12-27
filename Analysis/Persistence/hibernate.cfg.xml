@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+  <session-factory>
+    <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+    <property name="dialect">NHibernate.Dialect.MsSql2008Dialect</property>
+    <!--<property name="connection.driver_class">NHibernate.Driver.SqlServerCeDriver</property>-->
+    <property name="connection.connection_string">Server=172.17.242.193;Database=Upbit;User Id=sa;Password=SqlserverTest!@;Connect Timeout=30;</property>
+
+    <property name="show_sql">true</property>
+    
+    <!-- mapping files -->
+    <mapping resource="Persistence.Mappings.Market.hbm.xml" assembly="Persistence" />
+    
+  </session-factory>
+</hibernate-configuration>
